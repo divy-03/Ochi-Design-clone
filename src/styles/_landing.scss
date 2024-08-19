@@ -1,0 +1,60 @@
+.landing {
+  padding-top: 70px;
+  height: 100dvh;
+
+  > .landMain {
+    padding: 6vw $sidepad 8vw $sidepad;
+    border-bottom: 1px solid rgb(184, 184, 184);
+
+    > .masker {
+      // border: 1px solid;
+      @include flex(row, start, center);
+      > div {
+        margin-top: 10px;
+        background: orange;
+        border-radius: 10px;
+        width: 9vw;
+        height: 5.7vw;
+      }
+
+      > h2 {
+        text-transform: uppercase;
+        font-family: "Grotesk";
+        font-size: 9vw;
+        line-height: 0.75;
+        font-weight: 100;
+      }
+    }
+  }
+
+  > .lTxt {
+    @include flex(row, space-between);
+    padding: 10px $sidepad;
+    width: 100%;
+
+    > p {
+      font-size: 17px;
+    }
+
+    > a {
+      @include flex(row, center, center, 5px);
+      color: rgb(33, 33, 33);
+      > button {
+        text-transform: uppercase;
+        font-size: 15px;
+        background: none;
+        border: 1px solid;
+        padding: 5px 10px;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+      > svg {
+        border: 1px solid;
+        font-size: 30px;
+        font-weight: 100;
+        border-radius: 50%;
+        // padding: 5px 10px;
+      }
+    }
+  }
+}

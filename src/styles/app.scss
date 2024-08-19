@@ -1,5 +1,19 @@
 @import "fonts";
+@import "variables";
+@import "mixin";
+@import "navbar";
+@import "landing";
 
-.landCont {
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Neue";
+  color: rgb(33, 33, 33);
+}
+
+body {
+  background-color: rgb(241, 241, 241);
 }

@@ -1,0 +1,27 @@
+.navbar {
+  @include flex(row, space-between, center);
+  background: none;
+  padding: 10px 50px;
+  height: 70px;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+
+  > .navLinks {
+    @include flex(row, space-between, center);
+    height: 100%;
+
+    > a {
+      color: black;
+      font-family: "Neue";
+      font-size: 17px;
+      font-weight: 100;
+
+      &:last-of-type {
+        margin-left: 250px;
+      }
+    }
+  }
+}
