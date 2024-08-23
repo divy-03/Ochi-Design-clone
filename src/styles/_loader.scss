@@ -1,0 +1,51 @@
+.loadCont {
+  @include flex();
+  width: 100%;
+  height: 100dvh;
+  position: fixed;
+  background-color: #004d43;
+  // background-color: #ff69b4;
+  background-color: #00d2b6;
+  z-index: 20;
+
+  > div {
+    overflow: hidden;
+    > pre, h1 {
+      color: #ffa500;
+      // color: #004d43;
+      font-size: 15vw;
+      text-transform: uppercase;
+      font-family: "Grotesk";
+      overflow: hidden;
+      font-weight: 900;
+      text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 10px 15px 0 #000,;
+      // line-height: 0.1;
+    }
+
+    &:last-child {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      > h2 {
+        // color: #ff69b4;
+        // color: #004d43;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // color: #00d2b6;
+        font-size: 10vw;
+        text-transform: uppercase;
+        font-family: "Grotesk";
+        overflow: hidden;
+        line-height: 0.8;
+        
+
+        > svg {
+          color: #00d2b6;
+          margin-top: 15px;
+          margin-left: -15px;
+        }
+      }
+    }
+  }
+}

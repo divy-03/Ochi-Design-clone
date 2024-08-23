@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/app.scss";
-import Navbar from "./components/Navbar";
-import Landing from "./components/Landing";
+import Home from "./components/Home";
+import Preloader from "./components/Preloader";
+import useProgressTracker from "./progress";
 
 const App = () => {
+  const progress = useProgressTracker();
+
   return (
     <div>
-      <Navbar />
-      <Landing />
+      <Preloader progress={progress} />
+      {/* {showHome && <Home />} */}
+      <Home />
     </div>
   );
 };

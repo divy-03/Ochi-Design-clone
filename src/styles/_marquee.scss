@@ -1,0 +1,25 @@
+.marqueeCont {
+    width: 100%;
+    background-color: rgb(0, 77, 67);
+    padding: 0vw $sidepad;
+    overflow-x: hidden;
+    border-top: 1px solid rgb(77, 131, 124);
+    border-bottom: 1px solid rgb(77, 131, 124);
+    // border: 2px solid;
+
+    > .marquee {
+        display: flex;
+        
+        > h1 {
+            font-family: "Grotesk";
+            text-transform: uppercase;
+            color: $off;
+            flex-wrap: wrap;
+            flex-shrink: 0;
+            font-size: 28vw;
+            padding-right: $sidepad;
+
+            // font-size: 440px;
+        }
+    }
+}

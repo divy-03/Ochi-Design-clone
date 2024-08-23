@@ -6,9 +6,9 @@ const Landing = () => {
     <div className="landing">
       <div className="landMain">
         {["we create", "eye-opening", "presentations"].map((item, idx) => (
-          <div className="masker">
-            {idx==1 && <div></div>}
-            <h2 key={idx}>{item}</h2>
+          <div className="masker" key={idx}>
+            {idx == 1 && <div></div>}
+            <h2>{item}</h2>
           </div>
         ))}
       </div>
