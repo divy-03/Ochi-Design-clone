@@ -1,0 +1,63 @@
+.aboutCont {
+  > div {
+    background-color: #cdea68;
+    padding: $sidepad;
+
+    &:first-of-type {
+      @include flex(row, start, center);
+      border-radius: 20px 20px 0 0;
+      border-bottom: 1px solid #99ad53;
+
+      > p {
+        font-size: 3.4vw;
+        line-height: 0.95;
+      }
+    }
+    &:last-of-type {
+      @include flex(row, space-between);
+      padding: 10px $sidepad $sidepad $sidepad;
+
+      > div {
+        width: 40%;
+        height: 35vw;
+
+        > h2 {
+          font-size: 3vw;
+          margin-bottom: 20px;
+        }
+
+        > button {
+          @include flex();
+          @include btn(#212121);
+          color: #f1f1f1;
+          padding: 1.2vw 4.5vw 1.2vw 1.5vw;
+          font-size: 1vw;
+          border-radius: 50px;
+          font-weight: 100;
+          text-transform: uppercase;
+          position: relative;
+
+          > div {
+            @include flex();
+            font-size: 1.5vw;
+            font-size: 0;
+            font-weight: 100;
+            position: absolute;
+            right: 10px;
+            padding: 0.5vw;
+            background-color: #f1f1f1;
+            // width: 2.5vw;
+            // height: 2.5vw;
+            border-radius: 50%;
+          }
+        }
+
+        &:last-of-type {
+          border-radius: 20px;
+          height: 35vw;
+          background-color: #99ad53;
+        }
+      }
+    }
+  }
+}

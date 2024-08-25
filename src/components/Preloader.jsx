@@ -43,9 +43,11 @@ const Preloader = (props) => {
   });
 
   useGSAP(() => {
-    if (progress === 50) {
-      tl.current.reverse();
-    }
+
+    // TODO
+    // if (progress === 50) {
+    //   tl.current.reverse();
+    // }
     if (progress === 100) {
       gsap.delayedCall(0.3, () => tl.current.play());
     }

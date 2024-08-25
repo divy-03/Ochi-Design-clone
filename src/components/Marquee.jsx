@@ -3,7 +3,12 @@ import React from "react";
 
 const Marquee = () => {
   return (
-    <div className="marqueeCont">
+    <div
+      // data-scroll
+      // data-scroll-section
+      // data-scroll-speed=".2"
+      className="marqueeCont"
+    >
       <div className="marquee">
         <motion.h1
           initial={{ x: "0" }}

@@ -5,6 +5,8 @@
 @import "landing";
 @import "marquee";
 @import "loader";
+@import "about";
+@import "eye";
 
 * {
   margin: 0;
@@ -23,4 +25,9 @@ body {
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+.wrapper {
+  overflow: hidden;
+  width: 100%;
 }

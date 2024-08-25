@@ -8,9 +8,9 @@
 
     > .masker {
       // border: 1px solid;
-      @include flex(row, start, center);
+      @include flex(row, start, center, 0);
       > div {
-        margin-top: 10px;
+        margin: 15px 10px 0 0 ;
         background: orange;
         border-radius: 10px;
         width: 9vw;
