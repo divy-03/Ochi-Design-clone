@@ -1,6 +1,7 @@
 .landing {
   padding-top: 70px;
   height: 100dvh;
+  background-color: $off;
 
   > .landMain {
     padding: 6vw $sidepad 8vw $sidepad;
@@ -10,7 +11,7 @@
       // border: 1px solid;
       @include flex(row, start, center, 0);
       > div {
-        margin: 15px 10px 0 0 ;
+        margin: 15px 10px 0 0;
         background: orange;
         border-radius: 10px;
         width: 9vw;
@@ -32,28 +33,28 @@
     padding: 10px $sidepad;
     width: 100%;
 
-    > p {
+    > li {
       font-size: 17px;
-    }
 
-    > a {
-      @include flex(row, center, center, 5px);
-      color: rgb(33, 33, 33);
-      > button {
-        text-transform: uppercase;
-        font-size: 15px;
-        background: none;
-        border: 1px solid;
-        padding: 5px 10px;
-        border-radius: 50px;
-        cursor: pointer;
-      }
-      > svg {
-        border: 1px solid;
-        font-size: 30px;
-        font-weight: 100;
-        border-radius: 50%;
-        // padding: 5px 10px;
+      > a {
+        @include flex(row, center, center, 5px);
+        color: rgb(33, 33, 33);
+        > button {
+          text-transform: uppercase;
+          font-size: 15px;
+          background: none;
+          border: 1px solid;
+          padding: 5px 10px;
+          border-radius: 50px;
+          cursor: pointer;
+        }
+        > svg {
+          border: 1px solid;
+          font-size: 30px;
+          font-weight: 100;
+          border-radius: 50%;
+          // padding: 5px 10px;
+        }
       }
     }
   }

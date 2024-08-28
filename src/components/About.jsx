@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import gsap from "gsap";
 import { MdArrowOutward } from "react-icons/md";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const About = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -13,6 +15,30 @@ const About = () => {
       fontSize: "1.5vw",
       duration: 0.2,
       ease: "back.out",
+    });
+
+    gsap.from(".btn, .abImg", {
+      scale: 1.1,
+      duration: 0.2,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".aboutCont",
+        start: "top 80%",
+        end: "bottom 80%",
+        scroller: "body",
+        // markers: true,
+      },
+    });
+
+    gsap.to(".aboutCont", {
+      yPercent: -60,
+      scrollTrigger: {
+        trigger: ".aboutCont",
+        start: "-100% 0",
+        end: "-50% 0%",
+        scrub: 1,
+        // markers: true,
+      },
     });
 
     // Cleanup function to kill the timeline on unmount
@@ -46,7 +72,7 @@ const About = () => {
       </div>
       <div>
         <div>
-          <h2>Our Approach</h2>
+          <h2 className="abHead">Our Approach</h2>
           <button
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -58,7 +84,7 @@ const About = () => {
             </div>
           </button>
         </div>
-        <div></div>
+        <div className="abImg"></div>
       </div>
     </div>
   );

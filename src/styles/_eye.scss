@@ -5,6 +5,8 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  transform: translate(0, -33.1vw);
+  overflow: hidden;
 
   > div {
     @include flex();

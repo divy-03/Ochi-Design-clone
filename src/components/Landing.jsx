@@ -11,19 +11,21 @@ const Landing = (props) => {
   useGSAP(() => {
     tl.current = gsap
       .timeline()
-      .from(".landing", {
-        duration: 1,
-        yPercent: 100,
+      .from(".lTxt > li", {
+        duration: .8,
+        x: 100,
+        scale: 1.1,
+        stagger: .2,
         opacity: 0,
         ease: "power3.out",
       })
-      .from(".masker div", { width: 0, ease: "power2.out", marginRight: 0 })
+      .from(".masker div", { width: 0, ease: "power2.out", marginRight: 0, duration: 1 }, ".5")
       .pause();
   });
 
   useGSAP(() => {
     if (progress === 100) {
-      gsap.delayedCall(1, () => tl.current.play());
+      gsap.delayedCall(2, () => tl.current.play());
     }
   }, [progress]);
   return (
@@ -45,14 +47,16 @@ const Landing = (props) => {
           </div>
         ))}
       </div>
-      <div className="lTxt">
-        <p>For public and private companies</p>
-        <p>From the first pitch to IPO</p>
-        <a href="#">
-          <button>start the project</button>
-          <MdArrowOutward />
-        </a>
-      </div>
+      <ul className="lTxt">
+        <li>For public and private companies</li>
+        <li>From the first pitch to IPO</li>
+        <li>
+          <a href="#">
+            <button>start the project</button>
+            <MdArrowOutward />
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };

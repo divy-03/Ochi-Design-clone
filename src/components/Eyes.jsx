@@ -1,3 +1,8 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 import React, { useEffect, useState } from "react";
 
 const Eyes = () => {
@@ -49,11 +54,24 @@ const Eyes = () => {
     };
   }, []);
 
+  // useGSAP(() => {
+  //   gsap.from(".eyeCont", {
+  //     yPercent: 50,
+  //     scrollTrigger: {
+  //       trigger: ".eyeCont",
+  //       start: "100% 0",
+  //       end: "0% 0",
+  //       scrub: 1,
+  //       markers: true,
+  //     },
+  //   })
+  // })
+
   return (
     <div
-      data-scroll
-      data-scroll-section
-      data-scroll-speed=".2"
+      // data-scroll
+      // data-scroll-section
+      // data-scroll-speed=".2"
       className="eyeCont"
     >
       <div className="eyeBox">

@@ -14,7 +14,7 @@ const Home = ({ progress }) => {
         <Marquee />
         <About />
         <Eyes />
-        <About />
+        {/* <About /> */}
       </div>
     </div>
   );

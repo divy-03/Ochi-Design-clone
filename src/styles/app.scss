@@ -19,8 +19,9 @@
 }
 
 body {
-  background-color: $off;
+  background-color: #004d43;
   scrollbar-width: none;
+  overflow: hidden;
 }
 
 body::-webkit-scrollbar {

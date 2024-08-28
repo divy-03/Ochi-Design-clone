@@ -1,7 +1,23 @@
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
 import { motion } from "framer-motion";
 import React from "react";
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Marquee = () => {
+  useGSAP(() => {
+    gsap.to(".marqueeCont", {
+      yPercent: -60,
+      scrollTrigger: {
+        trigger: ".aboutCont",
+        start: "-120% 0",
+        end: "0% 0%",
+        scrub: 1,
+        // markers: true,
+      },
+    });
+  });
   return (
     <div
       // data-scroll
